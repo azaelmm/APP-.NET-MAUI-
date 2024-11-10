@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell 
+    x:Class="UD2EJER5Azael.AppShell" 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:UD2EJER5Azael"
+    Title="UD2EJER5Azael">
+
+    <ShellContent 
+        Title="Datos de Matrícula" 
+        ContentTemplate="{DataTemplate local:DatosMatricula}" 
+        Route="DatosMatricula" />
+
+    <ShellContent 
+        Title="Curso" 
+        ContentTemplate="{DataTemplate local:Curso}" 
+        Route="Curso" />
+
+    <ShellContent 
+        Title="Forma de Pago" 
+        ContentTemplate="{DataTemplate local:FormaPago}" 
+        Route="FormaPago" />
+
+</Shell>
+

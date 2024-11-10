@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UD2EJER5Azael.DatosMatricula"
+             Title="Datos de Matrícula">
+
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#3E3E3E" Offset="0.0" /> 
+            <GradientStop Color="#000000" Offset="1.0" /> 
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout Padding="20" Spacing="20">
+
+        <Label Text="🎃 ¡Datos de Matrícula! 🎃" 
+               FontSize="24" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center"
+               TextColor="#FFA500" /> 
+
+        <Frame Padding="15" CornerRadius="10" BackgroundColor="#222222" HasShadow="True">
+            <StackLayout Spacing="15">
+                <Label Text="Curso" FontSize="Medium" TextColor="#FFA500" />
+                <Label x:Name="lblCurso" 
+                       Text="{Binding NombreCurso}" 
+                       FontSize="Medium" 
+                       TextColor="White" />
+
+                <Label Text="Precio inicial" FontSize="Medium" TextColor="#FFA500" />
+                <Label x:Name="lblPrecio" 
+                       Text="{Binding PrecioCurso}" 
+                       FontSize="Medium" 
+                       TextColor="White" />
+
+                <Label Text="Forma de pago" FontSize="Medium" TextColor="#FFA500" />
+                <Label x:Name="lblFormaPago" 
+                       Text="{Binding FormaPago}" 
+                       FontSize="Medium" 
+                       TextColor="White" />
+            </StackLayout>
+        </Frame>
+
+        <Button Text="Seleccionar curso" 
+                Clicked="OnSeleccionarCursoClicked" 
+                Margin="0,10,0,0"
+                BackgroundColor="#FFA500"
+                TextColor="Black"
+                CornerRadius="25"
+                FontSize="Medium"
+                HeightRequest="50" />
+
+        <Button Text="Seleccionar forma de pago" 
+                Clicked="OnSeleccionarFormaPagoClicked" 
+                Margin="0,5,0,0" 
+                BackgroundColor="#FFA500"
+                TextColor="Black"
+                CornerRadius="25"
+                FontSize="Medium"
+                HeightRequest="50" />
+
+        <Button Text="Calcular precio" 
+                x:Name="btnCalcularPrecio" 
+                IsEnabled="True" 
+                Clicked="OnCalcularPrecioClicked" 
+                Margin="0,20,0,0" 
+                BackgroundColor="#FFC107"
+                TextColor="Black"
+                CornerRadius="25"
+                FontSize="Medium"
+                HeightRequest="50" />
+
+        <Label x:Name="lblPrecioFinal" 
+               Text="" 
+               FontSize="Large" 
+               TextColor="#FFA500" 
+               Margin="0,10,0,0"
+               HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+
+</ContentPage>

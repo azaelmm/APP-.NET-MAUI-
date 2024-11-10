@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UD2EJER5Azael.FormaPago"
+             Title="Forma de Pago">
+    <!-- Fondo oscuro para Halloween -->
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#FF6F00" Offset="0.0" />
+            <!-- Naranja -->
+            <GradientStop Color="#4A148C" Offset="0.5" />
+            <!-- Morado -->
+            <GradientStop Color="#000000" Offset="1.0" />
+            <!-- Negro -->
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout Padding="20">
+        <Label Text="Selecciona una forma de pago"
+               FontSize="Large"
+               TextColor="Orange"
+               HorizontalOptions="Center" />
+
+        <!-- Separador -->
+        <BoxView HeightRequest="20" BackgroundColor="Transparent" />
+        <!-- Espacio entre el título y las imágenes -->
+
+        <HorizontalStackLayout Spacing="30" VerticalOptions="Center" HorizontalOptions="Center">
+            <!-- Frame con sombra para el botón de efectivo -->
+            <Frame CornerRadius="20"
+                   Padding="10"
+                   BackgroundColor="#333"
+                   HasShadow="True">
+                <ImageButton Source="efectivo.jfif" 
+                             Clicked="OnPagoEfectivoClicked"
+                             WidthRequest="100"
+                             HeightRequest="100" />
+            </Frame>
+
+            <!-- Frame con sombra para el botón de tarjeta -->
+            <Frame CornerRadius="20"
+                   Padding="10"
+                   BackgroundColor="#333"
+                   HasShadow="True">
+                <ImageButton Source="tarjeta.jfif" 
+                             Clicked="OnPagoTarjetaClicked"
+                             WidthRequest="100"
+                             HeightRequest="100" />
+            </Frame>
+        </HorizontalStackLayout>
+
+        <Image Source="calabazasinfondo.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="End" />
+    </VerticalStackLayout>
+</ContentPage>

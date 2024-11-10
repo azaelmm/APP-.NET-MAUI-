@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UD2EJER5Azael.Curso"
+             Title="Curso">
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#8A2BE2" Offset="0.0" />
+            <!-- Purple -->
+            <GradientStop Color="#FF4500" Offset="1.0" />
+            <!-- Orange Red -->
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout Padding="20">
+        <Label Text="Selecciona un curso" FontSize="Large" TextColor="Orange" HorizontalOptions="Center" />
+        <!-- Separador -->
+        <BoxView HeightRequest="20" BackgroundColor="Transparent" />
+        <!-- Espacio entre el título y las imágenes -->
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+            <Frame Padding="0" BackgroundColor="Transparent" BorderColor="Orange" CornerRadius="20" HasShadow="True">
+                <ImageButton Source="curso1.jfif" Clicked="OnCurso1Clicked" WidthRequest="250" HeightRequest="250">
+                    <ImageButton.Shadow>
+                        <Shadow Brush="Black" Opacity="0.4" Offset="4,4" Radius="10"/>
+                    </ImageButton.Shadow>
+                </ImageButton>
+            </Frame>
+            <Frame Padding="0" BackgroundColor="Transparent" BorderColor="Orange" CornerRadius="20" HasShadow="True">
+                <ImageButton Source="curso2.jfif" Clicked="OnCurso2Clicked" WidthRequest="250" HeightRequest="250">
+                    <ImageButton.Shadow>
+                        <Shadow Brush="Black" Opacity="0.4" Offset="4,4" Radius="10"/>
+                    </ImageButton.Shadow>
+                </ImageButton>
+            </Frame>
+        </HorizontalStackLayout>
+
+        <!-- Añadir un toque festivo con un icono de Halloween -->
+        <Image Source="calabazasinfondo.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="End" />
+    </VerticalStackLayout>
+</ContentPage>
